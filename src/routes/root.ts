@@ -10,6 +10,9 @@ const root: FastifyPluginAsync = async (fastify: FastifyInstance) => {
 
     return response;
   });
+  fastify.get('/health', async (request, reply) => {
+    return reply.send("OK")
+  });
 };
 
 export default root;
